@@ -34,11 +34,11 @@ public function saveWork(Request $request)
         $work->user_id = Session::get('empId');
 
         $wh = $request->work_hour;
-        // $work->work_hour = $wh;
+        $work->work_hour = $wh;
 
 
         $wm = $request->ex_min;
-        // $work->ex_min = $wm;
+        $work->ex_min = $wm;
 
         // $th = floor($wm / 60);
         // $hh = $wh+$th;
@@ -53,75 +53,6 @@ public function saveWork(Request $request)
     
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-// $work = new Work();
-//         $work->project_id = $request->project_fullname;
-//         $work->work_title = $request->work_title;
-//         $work->work_desc = $request->work_desc;
-//         $work->start_date = $request->start_date;
-//         $work->end_date = $request->end_date;
-
-//         $work->user_id = Session::get('empId');
-
-//         $wh = $request->work_hour;
-//         $work->work_hour = $wh;
-
-
-//         $wm = $request->ex_min;
-//         $work->ex_min = $wm;
-
-//         $th = floor($wm / 60);
-//         $hh = $wh+$th;
-//         $tm = ($wm % 60); 
-
-//          $total = sprintf('%02d hours %02d minutes',$hh,$tm);
-//          $work->total_time = $total;
-
-//         $work->save();
-//             return redirect('/add-work')->with('message','work added successfully') ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // public function saveWork(Request $request)
-    // {
-    // 	$work = new Work();
-    //     $work->project_id = $request->project_fullname;
-    //     $work->work_title = $request->work_title;
-    //     $work->work_desc = $request->work_desc;
-    //     $work->start_date = $request->start_date;
-    //     $work->end_date = $request->end_date;
-    //     $work->work_hour = $request->work_hour;
-    //     $work->ex_min = $request->ex_min;
-    //     $work->user_id = Session::get('empId');
-    //     $work->save();
-    //         return redirect('/add-work')->with('message','work added successfully') ;
-        
-    
-    // }
 
       public function viewWork()
     {
